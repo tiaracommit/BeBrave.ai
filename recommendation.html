@@ -1,0 +1,786 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Garden | Tiara's Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: #100b1b;
+            color: #f4edff;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .background-glow {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            filter: blur(130px);
+            opacity: 0.16;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .glow-one {
+            background: #9d63e8;
+            top: -180px;
+            left: -180px;
+        }
+
+        .glow-two {
+            background: #583c9b;
+            right: -200px;
+            top: 450px;
+        }
+
+        .container {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(16, 11, 27, 0.88);
+            backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(213, 181, 255, 0.12);
+        }
+
+        .nav-content {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .brand-icon {
+            width: 39px;
+            height: 39px;
+            display: grid;
+            place-items: center;
+            background: linear-gradient(135deg, #d5aaff, #9560d6);
+            color: #241536;
+            border-radius: 13px;
+            font-size: 20px;
+        }
+
+        .brand span:last-child {
+            color: #d9a7ff;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #c7b9d9;
+            font-size: 13px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #d9a7ff;
+        }
+
+        .nav-home {
+            padding: 10px 17px;
+            border: 1px solid rgba(211, 174, 255, 0.3);
+            border-radius: 30px;
+            color: #e4caff !important;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 100px 0 85px;
+            position: relative;
+        }
+
+        .hero-box {
+            position: relative;
+            overflow: hidden;
+            padding: 75px 70px;
+            border-radius: 30px;
+            border: 1px solid rgba(211, 174, 255, 0.22);
+            background:
+                radial-gradient(circle at 90% 10%, rgba(173, 116, 226, 0.18), transparent 32%),
+                linear-gradient(135deg, #211633, #171126 65%, #251638);
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero-box::after {
+            content: "✦";
+            position: absolute;
+            right: 9%;
+            top: 14%;
+            font-size: 100px;
+            color: rgba(218, 174, 255, 0.13);
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            padding: 8px 14px;
+            border: 1px solid rgba(218, 174, 255, 0.25);
+            border-radius: 30px;
+            color: #d7b4ff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #a9f0d1;
+            box-shadow: 0 0 12px #a9f0d1;
+        }
+
+        .hero h1 {
+            max-width: 720px;
+            margin: 25px 0 18px;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1.12;
+            letter-spacing: -1.5px;
+        }
+
+        .hero h1 span {
+            color: #c69aff;
+        }
+
+        .hero-description {
+            max-width: 610px;
+            color: #c6b8d6;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 13px;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .button-primary {
+            background: #c69aff;
+            color: #211331;
+        }
+
+        .button-primary:hover {
+            background: #dfc2ff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(198, 154, 255, 0.2);
+        }
+
+        .button-secondary {
+            border: 1px solid rgba(218, 174, 255, 0.3);
+            color: #e5d4f8;
+        }
+
+        .button-secondary:hover {
+            background: rgba(198, 154, 255, 0.1);
+        }
+
+        .hero-note {
+            margin-top: 30px;
+            color: #a997bd;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        /* SECTION GENERAL */
+
+        .section {
+            padding: 65px 0;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .section-label {
+            color: #c69aff;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .section-heading h2 {
+            margin: 12px 0;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(30px, 4vw, 42px);
+        }
+
+        .section-heading p {
+            color: #b8a9c9;
+            font-size: 14px;
+        }
+
+        /* CATEGORY */
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .category-card {
+            padding: 23px 17px;
+            border: 1px solid rgba(211, 174, 255, 0.16);
+            border-radius: 18px;
+            background: rgba(37, 26, 54, 0.65);
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(198, 154, 255, 0.6);
+            background: #2a1d3c;
+        }
+
+        .category-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .category-card p {
+            color: #ad9cbe;
+            font-size: 11px;
+        }
+
+        /* RESOURCE CARDS */
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .resource-card {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            border: 1px solid rgba(211, 174, 255, 0.16);
+            border-radius: 21px;
+            background: linear-gradient(145deg, #211831, #191225);
+            transition: 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(198, 154, 255, 0.55);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .resource-icon {
+            flex-shrink: 0;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            border-radius: 17px;
+            background: rgba(198, 154, 255, 0.13);
+            font-size: 27px;
+        }
+
+        .resource-info {
+            flex: 1;
+        }
+
+        .resource-tag {
+            color: #c69aff;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .resource-info h3 {
+            margin: 5px 0 7px;
+            font-size: 19px;
+        }
+
+        .resource-info p {
+            color: #b9abc9;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #d5adff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .resource-link:hover {
+            color: #ffffff;
+        }
+
+        /* QUOTE */
+
+        .quote-section {
+            padding: 40px 0 90px;
+        }
+
+        .quote-box {
+            padding: 42px 30px;
+            text-align: center;
+            border-radius: 24px;
+            border: 1px solid rgba(211, 174, 255, 0.17);
+            background: linear-gradient(120deg, #251936, #1a1427);
+        }
+
+        .quote-symbol {
+            color: #c69aff;
+            font-size: 34px;
+        }
+
+        .quote-box p {
+            max-width: 650px;
+            margin: 12px auto;
+            color: #e1d3f0;
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+        }
+
+        .quote-box span {
+            color: #a997bd;
+            font-size: 11px;
+            letter-spacing: 1px;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            border-top: 1px solid rgba(211, 174, 255, 0.13);
+            padding: 28px 0;
+            color: #a997bd;
+            font-size: 12px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer a {
+            color: #d1aaff;
+            font-weight: 700;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 768px) {
+            .nav-content {
+                padding: 15px 0;
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: center;
+                gap: 18px;
+                flex-wrap: wrap;
+            }
+
+            .hero {
+                padding: 55px 0;
+            }
+
+            .hero-box {
+                padding: 45px 28px;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .brand {
+                font-size: 15px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .resource-card {
+                padding: 19px;
+                gap: 13px;
+            }
+
+            .resource-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-content">
+
+            <a href="index.html" class="brand">
+                <span class="brand-icon">✦</span>
+                <span>tiara<span>.porto</span></span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="#categories">Kategori</a></li>
+                <li><a href="#resources">Rekomendasi</a></li>
+                <li><a href="#about">Tentang</a></li>
+            </ul>
+
+            <a href="index.html" class="nav-home">← Profil Saya</a>
+
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <header class="hero">
+            <div class="container">
+                <div class="hero-box">
+
+                    <span class="eyebrow">A little corner of knowledge</span>
+
+                    <h1>
+                        Temukan tempat untuk
+                        <span>belajar dan bertumbuh.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Kumpulan website, tools, dan platform pilihan
+                        yang bisa membantu perjalanan belajar teknologi,
+                        mengembangkan ide, dan menciptakan sesuatu yang baru.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#resources" class="button button-primary">
+                            Jelajahi Rekomendasi ↗
+                        </a>
+
+                        <a href="index.html" class="button button-secondary">
+                            Kembali ke Profil
+                        </a>
+                    </div>
+
+                    <p class="hero-note">
+                        ✦ LEARN SOMETHING NEW · BUILD SOMETHING MEANINGFUL
+                    </p>
+
+                </div>
+            </div>
+        </header>
+
+        <!-- CATEGORY SECTION -->
+        <section class="section" id="categories">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">Explore the garden</span>
+                    <h2>Jelajahi berdasarkan minat</h2>
+                    <p>
+                        Setiap perjalanan dimulai dari rasa ingin tahu.
+                        Pilih kategori yang ingin kamu eksplorasi.
+                    </p>
+                </div>
+
+                <div class="category-grid">
+
+                    <a href="#learning" class="category-card">
+                        <div class="category-icon">📚</div>
+                        <h3>Learning</h3>
+                        <p>Belajar dan eksplorasi</p>
+                    </a>
+
+                    <a href="#startup-innovation" class="category-card">
+                        <div class="category-icon">🚀</div>
+                        <h3>Startup & Innovation</h3>
+                        <p>Programming dan coding</p>
+                    </a>
+
+                    <a href="#innovation" class="category-card">
+                        <div class="category-icon">✧</div>
+                        <h3>AI & Innovation</h3>
+                        <p>Teknologi masa depan</p>
+                    </a>
+
+                    <a href="#productivity" class="category-card">
+                        <div class="category-icon">🌙</div>
+                        <h3>Productivity</h3>
+                        <p>Tools untuk berkarya</p>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- RESOURCE SECTION -->
+        <section class="section" id="resources">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-label">Handpicked resources</span>
+                    <h2>Tempat untuk mulai menjelajah</h2>
+                    <p>
+                        Beberapa platform yang bisa menjadi teman
+                        belajar, bereksperimen, dan mengembangkan ide.
+                    </p>
+                </div>
+
+                <div class="resource-grid">
+
+                    <!-- CARD 1 -->
+                    <article class="resource-card" id="learning">
+                        <div class="resource-icon">📖</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">Learning</span>
+                            <h3>Microsoft Learn</h3>
+                            <p>
+                                Platform pembelajaran untuk mempelajari
+                                teknologi Microsoft, cloud computing,
+                                data, dan berbagai keterampilan digital.
+                            </p>
+                            <a class="resource-link"
+                               href="https://learn.microsoft.com/?WT.mc_id=academic&wt.mc_id=studentamb_630424"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CARD 2 -->
+                    <article class="resource-card">
+                        <div class="resource-icon">☁️</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">Cloud Technology</span>
+                            <h3>Microsoft Azure</h3>
+                            <p>
+                                Kenali layanan cloud computing untuk
+                                membangun, mengembangkan, dan mengelola
+                                berbagai solusi digital.
+                            </p>
+                            <a class="resource-link"
+                               href="https://azure.microsoft.com/?WT.mc_id=academic&wt.mc_id=studentamb_630424"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CARD 3 -->
+                    <article class="resource-card" id="Startup & Innovation">
+                        <div class="resource-icon">🏆</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">Startup & Innovation</span>
+                            <h3>Imagine Cup</h3>
+                             <p>
+                                 Kompetisi inovasi teknologi dari Microsoft untuk pelajar
+                                 dan mahasiswa dalam mengembangkan solusi kreatif
+                                 melalui teknologi dan entrepreneurship.
+                            </p>
+                            <a class="resource-link"
+                               href="https://imaginecup.microsoft.com/?WT.mc_id=academic&wt.mc_id=studentamb_630424"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CARD 4 -->
+                    <article class="resource-card">
+                        <div class="resource-icon">💻</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">Startup & Innovation</span>
+                            <h3>Visual Studio Code</h3>
+                            <p>
+                                Code editor yang dapat digunakan untuk
+                                menulis, mengembangkan, dan mengelola
+                                berbagai project programming.
+                            </p>
+                            <a class="resource-link"
+                               href="https://code.visualstudio.com/?WT.mc_id=academic&wt.mc_id=studentamb_630424"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CARD 5 -->
+                    <article class="resource-card" id="innovation">
+                        <div class="resource-icon">✧</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">AI & Innovation</span>
+                            <h3>Azure AI Foundry</h3>
+                            <p>
+                                Jelajahi platform untuk mengeksplorasi,
+                                membangun, dan mengelola aplikasi
+                                berbasis artificial intelligence.
+                            </p>
+                            <a class="resource-link"
+                               href="https://ai.azure.com/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CARD 6 -->
+                    <article class="resource-card" id="productivity">
+                        <div class="resource-icon">🪄</div>
+
+                        <div class="resource-info">
+                            <span class="resource-tag">Productivity</span>
+                            <h3>Microsoft Loop</h3>
+                            <p>
+                                Ruang kerja kolaboratif untuk
+                                mengorganisasi ide, mengelola informasi,
+                                dan bekerja bersama dalam satu tempat.
+                            </p>
+                            <a class="resource-link"
+                               href="https://loop.cloud.microsoft/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Kunjungi website ↗
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="quote-section" id="about">
+            <div class="container">
+                <div class="quote-box">
+                    <div class="quote-symbol">✦</div>
+
+                    <p>
+                        "Every great idea begins with curiosity
+                        and the courage to explore."
+                    </p>
+
+                    <span>A LITTLE REMINDER FROM TIARA'S RESOURCE GARDEN</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <p>© 2026 Tiara's Portfolio. Made with curiosity ✦</p>
+
+            <a href="index.html">← Kembali ke halaman profil</a>
+
+        </div>
+    </footer>
+
+</body>
+</html>

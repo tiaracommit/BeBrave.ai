@@ -1,333 +1,126 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeBrave - Susun Laporan Kronologi Trauma Secara Aman & Privat</title>
-  
-  <!-- SEO Metadata -->
-  <meta name="description" content="BeBrave membantu korban perundungan, pelecehan, dan kekerasan menyusun ingatan traumatis menjadi draf laporan kronologis yang terstruktur secara aman, privat, dan penuh empati.">
-  <meta name="keywords" content="bebrave, perlindungan korban, kronologi trauma, kesehatan mental, anti-bullying, laporan privat, aman">
-  
-  <!-- Google Fonts -->
+  <meta name="description" content="Portfolio Tiara Maulia Putri Sidarta, mahasiswa Sistem Informasi Universitas Dian Nuswantoro.">
+  <meta name="theme-color" content="#171126">
+  <title>Tiara Maulia Putri Sidarta — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  
-  <!-- JS Modules -->
-  <script src="js/utils.js" defer></script>
-  <script src="js/navigation.js" defer></script>
-  <script src="js/mascot.js" defer></script>
-  <script src="js/slider.js" defer></script>
-  <script src="js/articles.js" defer></script>
-  <script src="js/timeline.js" defer></script>
-  <script src="js/scroll.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
 
-  <!-- Scroll Progress Indicator -->
-  <div class="scroll-progress" aria-hidden="true"></div>
-
-  <!-- Ambient Glowing Background & Particles -->
-  <div class="ambient-bg" aria-hidden="true">
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
-    <div class="ambient-glow-3"></div>
-    <div class="particles-container"></div>
-  </div>
-
-  <!-- Header Navigation -->
-  <header class="header">
-    <div class="container">
-      <nav class="nav-container" aria-label="Menu Utama">
-        <a href="#hero" class="nav-brand" data-target="hero">
-          Be<span>Brave</span>
-        </a>
-        <ul class="nav-links nav-links-desktop" role="menubar">
-          <li role="none"><a class="nav-link active" data-target="hero" role="menuitem">Beranda</a></li>
-          <li role="none"><a class="nav-link" data-target="tentang-isu" role="menuitem">Tentang Isu</a></li>
-          <li role="none"><a class="nav-link" data-target="sumber-daya" role="menuitem">Sumber Daya</a></li>
-          <li role="none"><a class="nav-link" data-target="susun-kronologi" role="menuitem">Susun Kronologi</a></li>
-        </ul>
-        <button class="nav-hamburger" aria-label="Buka Menu" aria-expanded="false">
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-      </nav>
-    </div>
+  <header class="site-header" id="beranda">
+    <nav class="navbar shell" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Tiara — kembali ke beranda"><span class="brand-mark">✦</span><span>tiara<span class="brand-dot">.porto</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="recommendation.html">Rekomendasi</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Aktifkan mode terang"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button>
+        <a class="nav-cta" href="#kontak">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
   </header>
 
-  <!-- Mobile Dropdown Navigation Menu Overlay -->
-  <div class="nav-mobile-menu" aria-hidden="true">
-    <ul class="nav-links">
-      <li><a class="nav-link active" data-target="hero">Beranda</a></li>
-      <li><a class="nav-link" data-target="tentang-isu">Tentang Isu</a></li>
-      <li><a class="nav-link" data-target="sumber-daya">Sumber Daya</a></li>
-      <li><a class="nav-link" data-target="susun-kronologi">Susun Kronologi</a></li>
-    </ul>
-  </div>
+  <main id="konten" class="shell">
+    <section class="hero panel" aria-labelledby="hero-title">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> PORTFOLIO DIGITAL · 2026</p>
+        <p class="hero-kicker">Halo, aku Tiara <span aria-hidden="true">✧</span></p>
+        <h1 id="hero-title">Merangkai ide,<br><span>menciptakan dampak.</span></h1>
+        <p class="hero-description">Mahasiswa Sistem Informasi yang tertarik pada persimpangan teknologi, AI, bisnis, dan pengembangan produk digital.</p>
+        <div class="hero-tags" aria-label="Bidang minat"><span>AI & Technology</span><span>Product</span><span>Business</span></div>
+        <div class="hero-actions"><a class="button button-primary" href="#proyek">Lihat karya <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#tentang">Kenali aku</a></div>
+        <p class="hero-note"><span aria-hidden="true">✦</span> Currently learning, building, and making things happen.</p>
+      </div>
+      <div class="hero-art-wrap">
+        <div class="hero-art-label label-top">WITCH MODE: ON</div>
+        <img class="hero-character" src="images/tiara-character.png" alt="Ilustrasi karakter Tiara bergaya witchy pixel art bersama kucing hitam">
+        <span class="sparkle sparkle-a" aria-hidden="true">✦</span><span class="sparkle sparkle-b" aria-hidden="true">☾</span><span class="sparkle sparkle-c" aria-hidden="true">✧</span>
+        <div class="hero-art-label label-bottom">FOCUS · PLAN · CREATE</div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 / 06</div>
+    </section>
 
-  <!-- Main Content -->
-  <main>
-    
-    <!-- Hero Section -->
-    <section id="hero" class="section-hero">
-      <div class="container hero-grid">
-        <!-- Left Side: Copywriting Content -->
-        <div class="hero-content">
-          <h1 class="font-size-hero" style="font-size: var(--font-size-hero); margin-bottom: var(--space-4); letter-spacing: -1px;">Suaramu Kekuatanmu</h1>
-          <p style="font-size: var(--font-size-md); margin-bottom: var(--space-8); line-height: 1.7;">
-            Susun kronologimu secara terstruktur, aman, dan privat bersama kami. Kami membantu Anda merapikan ingatan traumatis menjadi draf dokumen yang siap digunakan untuk perlindungan hukum atau konseling psikologis.
-          </p>
-          <div class="hero-actions" style="display: flex; gap: var(--space-4);">
-            <a href="#susun-kronologi" class="btn btn-primary" data-target="susun-kronologi">
-              Susun Kronologi 
-            </a>
-            <a href="#tentang-isu" class="btn btn-secondary" data-target="tentang-isu">
-              Mengapa ini Penting?
-            </a>
+    <section class="intro-strip" aria-label="Informasi singkat">
+      <span>✦ SISTEM INFORMASI</span><span>✦ UNIVERSITAS DIAN NUSWANTORO</span><span>✦ CLASS OF 2025</span><span>✦ INDONESIA</span>
+    </section>
+
+    <section class="content-grid" id="tentang">
+      <article class="panel section-card about-card">
+        <div class="section-heading"><p class="eyebrow">01 — THE PERSON</p><h2>Tentang Saya<span class="heading-star">✦</span></h2></div>
+        <div class="about-layout">
+          <img class="profile-photo" src="images/image.png" alt="Foto profil Tiara" loading="lazy">
+          <div>
+            <p class="lead">Aku Tiara Maulia Putri Sidarta, mahasiswa Sistem Informasi di Universitas Dian Nuswantoro.</p>
+            <p>Aku memiliki ketertarikan pada teknologi, kecerdasan buatan, bisnis, dan pengembangan produk digital. Aku senang mempelajari hal baru, bekerja bersama tim, serta mengubah ide menjadi solusi yang bermanfaat.</p>
+            <div class="profile-facts"><span><b>Nama</b> Tiara Maulia Putri Sidarta</span><span><b>Status</b> Mahasiswa · 2025</span><span><b>Fokus</b> AI × Product × Business</span></div>
           </div>
         </div>
+      </article>
 
-        <!-- Right Side: Interactive Animated Mascot -->
-      <div class="hero-visual">
-    <video
-        autoplay
-        loop
-        muted
-        playsinline
-        preload="metadata"
-        style="width:100%; border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.2);">
-        <source src="hero-video.mp4" type="video/mp4">
-    </video>
-</div>
-          </div>
-        </div>
+      <aside class="panel mini-card education-card">
+        <p class="eyebrow">CURRENT CHAPTER</p><div class="mini-icon" aria-hidden="true">✧</div>
+        <h3>Universitas Dian Nuswantoro</h3><p>Sistem Informasi</p><span class="year-pill">2025 — sekarang</span>
+        <div class="card-footnote">Belajar memahami teknologi sekaligus kebutuhan manusia.</div>
+      </aside>
+    </section>
+
+    <section class="panel section-card" id="pengalaman">
+      <div class="section-heading heading-row"><div><p class="eyebrow">02 — THE JOURNEY</p><h2>Pengalaman & Organisasi</h2></div><span class="section-stamp">LEARN / LEAD / GROW</span></div>
+      <div class="timeline">
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">2026 · COMMUNITY</p><h3>Microsoft Student Ambassador</h3><p>Terpilih sebagai Microsoft Student Ambassador 2026.</p></div><span class="timeline-type">COMMUNITY</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">ORGANIZATION</p><h3>Biro Sistem Informasi</h3><p>Sekretaris.</p></div><span class="timeline-type">ORGANIZATION</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">ORGANIZATION</p><h3>BKM</h3><p>Anggota Divisi Kajian Strategis.</p></div><span class="timeline-type">ORGANIZATION</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">PROJECT & LEADERSHIP</p><h3>Project Leader & Hackathon Team Leader</h3><p>Memimpin pengerjaan proyek akademik dan tim dalam pengembangan ide serta solusi berbasis teknologi.</p></div><span class="timeline-type">LEADERSHIP</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">OTHER EXPERIENCE</p><h3>Private Tutor & Presenter</h3><p>Mengajar Bahasa Inggris dan Matematika secara privat serta mempresentasikan proyek dan gagasan dalam forum akademik.</p></div><span class="timeline-type">COMMUNICATION</span></article>
       </div>
     </section>
 
-    <!-- Storytelling Slider Section -->
-    <section id="tentang-isu" class="section-slider">
-      <div class="container">
-        <div class="slider-section-header">
-          <span class="article-category">Mengapa Ini Penting?</span>
-          <h2 style="font-size: var(--font-size-xxl); margin-top: var(--space-2); margin-bottom: var(--space-4);">
-            Trauma Membuat Cerita Terfragmentasi
-          </h2>
-          <p style="margin: 0 auto; text-align: center;">
-            Ketika seseorang mengalami tekanan berat, memori tersimpan secara acak. BeBrave membantu menyelaraskan kembali alur cerita Anda.
-          </p>
-        </div>
-
-        <!-- Apple-style Carousel Slider Component wrapper -->
-        <div class="slider-wrapper">
-          <div class="slider-container">
-            <!-- Injected dynamically by slider.js -->
-          </div>
-        </div>
-
-        <!-- Carousel Navigation Controls -->
-        <div class="slider-controls">
-          <button class="slider-btn slider-btn-prev" aria-label="Slide sebelumnya">
-            ←
-          </button>
-          <div class="slider-dots" role="tablist">
-            <!-- Dots injected dynamically by slider.js -->
-          </div>
-          <button class="slider-btn slider-btn-next" aria-label="Slide berikutnya">
-            →
-          </button>
-        </div>
+    <section class="panel section-card" id="proyek">
+      <div class="section-heading heading-row"><div><p class="eyebrow">03 — SELECTED WORK</p><h2>Proyek Pilihan</h2></div><p class="section-description">Beberapa ide yang sedang dan pernah aku kembangkan bersama tim.</p></div>
+      <div class="project-grid">
+        <article class="project-card project-reuang"><div class="project-visual visual-reuang" aria-hidden="true"><span class="visual-window"><i></i><i></i><i></i><b>REUANG</b><small>BUSINESS DASHBOARD</small><span class="visual-bars"><i></i><i></i><i></i><i></i></span></span><span class="visual-orbit">✧</span></div><div class="project-content"><div class="project-meta"><span>BUSINESS TECHNOLOGY</span><span>01</span></div><h3>REUANG</h3><p>Sistem manajemen pesanan untuk UMKM yang terintegrasi dengan WhatsApp dan Telegram. Mencakup katalog produk dan HPP, manajemen pesanan, verifikasi pembayaran, serta laporan penjualan dan laba.</p><div class="project-links"><a href="https://github.com/cyrzll/reuang" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://reuang-v1.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
+        <article class="project-card project-tracia"><div class="project-visual visual-tracia" aria-hidden="true"><span class="tracia-shield">♡</span><span class="tracia-orbit orbit-left">✦</span><span class="tracia-orbit orbit-right">✧</span><span class="visual-caption">AI · HUMAN · IMPACT</span></div><div class="project-content"><div class="project-meta"><span>AI & SOCIAL IMPACT</span><span>02</span></div><h3>TRACIA</h3><p>Inisiatif/organisasi yang menaungi BeBrave.ai, dengan fokus pada pemanfaatan teknologi untuk mendukung dampak sosial. BeBrave.ai merupakan salah satu aplikasi yang dikembangkan dalam lingkup ini.</p><div class="project-links"><a href="https://github.com/tracia-AI/BeBrave.ai" target="_blank" rel="noopener noreferrer">Repository terkait <span>↗</span></a></div></div></article>
+        <article class="project-card project-bebrave"><div class="project-visual visual-bebrave" aria-hidden="true"><span class="timeline-paper"><b>AI TIMELINE</b><i></i><i></i><i></i><i></i><small>CHRONOLOGY DRAFT</small></span><span class="brave-spark">✦</span></div><div class="project-content"><div class="project-meta"><span>AI APPLICATION</span><span>03</span></div><h3>BeBrave.ai</h3><p>Aplikasi berbasis AI yang membantu pengguna menyusun cerita menjadi draf laporan kronologis terstruktur, termasuk waktu, tempat, pihak terlibat, bukti, dan dampak. Menggunakan Google Gemini AI.</p><div class="project-links"><a href="https://github.com/tracia-AI/BeBrave.ai" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://bebraveaimarkoding.netlify.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
       </div>
     </section>
 
-    <!-- Mental Health Resource Section -->
-    <section id="sumber-daya" class="section-articles">
-      <div class="container">
-        <div class="articles-header">
-          <h2 style="font-size: var(--font-size-xxl); margin-bottom: var(--space-4);">
-            Sumber Daya Kesehatan Mental
-          </h2>
-          <p style="margin: 0 auto;">
-            Temukan panduan terpercaya dari lembaga medis dan kemanusiaan internasional untuk membantu proses pemulihan serta pemahaman hak-hak Anda.
-          </p>
-        </div>
-
-        <!-- Infinite Loop horizontal carousel wrapper -->
-        <div class="articles-carousel-wrapper">
-          <div class="articles-carousel">
-            <!-- Injected dynamically by articles.js -->
-          </div>
-        </div>
-
-        <!-- Articles Nav Controls -->
-        <div class="slider-controls" style="margin-top: var(--space-8);">
-          <button class="slider-btn articles-btn-prev" aria-label="Artikel sebelumnya">
-            ←
-          </button>
-          <button class="slider-btn articles-btn-next" aria-label="Artikel berikutnya">
-            →
-          </button>
-        </div>
-      </div>
+    <section class="content-grid achievement-grid">
+      <article class="panel section-card" id="pencapaian"><div class="section-heading"><p class="eyebrow">04 — LITTLE WINS</p><h2>Pencapaian</h2></div><ul class="achievement-list"><li><span>✦</span><div><b>Top 40 — International AI ASEAN Hackathon</b><p>Finalis bersama tim sebagai team leader.</p></div></li><li><span>✦</span><div><b>PKM-KC</b><p>Berpartisipasi sebagai project leader.</p></div></li><li><span>✦</span><div><b>Business Plan & Business Case</b><p>Berpartisipasi dalam kompetisi sebagai team leader.</p></div></li><li><span>✦</span><div><b>Speech Competition</b><p>Mencapai babak final kompetisi pidato.</p></div></li><li><span>✦</span><div><b>Conference Presenter</b><p>Mempresentasikan proyek dan gagasan berbasis riset dalam konferensi akademik.</p></div></li></ul></article>
+      <article class="panel section-card" id="sertifikasi"><div class="section-heading"><p class="eyebrow">05 — LEARNING PROOF</p><h2>Sertifikasi</h2></div><ul class="certificate-list"><li><b>Microsoft Applied Skills</b><span>Streamline Business Workflows with AI Chat · 2026</span></li><li><b>Microsoft Applied Skills</b><span>Generate Reports with AI Research Agents · 2026</span></li><li><b>McKinsey.org Forward Program</b><span>McKinsey & Company · 2026</span></li><li><b>GS-Sigret Presenter Certificate</b><span>Universitas Sultan Ageng Tirtayasa · 2025</span></li><li><b>Certificate of Appreciation — International BMC</b><span>Universitas Muhammadiyah Yogyakarta · 2025</span></li><li><b>Language Certificates</b><span>English dan German courses · 2022–2023</span></li></ul></article>
     </section>
 
-    <!-- AI Timeline Section -->
-    <section id="susun-kronologi" class="section-timeline">
-      <div class="container">
-        <div class="timeline-header">
-          <span class="article-category" style="color: var(--color-accent);">Asisten Virtualmu</span>
-          <h2 style="font-size: var(--font-size-xxl); margin-top: var(--space-2); margin-bottom: var(--space-4); color: var(--color-white);">
-            Susun Kronologi Kejadianmu
-          </h2>
-          <p style="margin: 0 auto; color: rgba(255, 255, 255, 0.8);">
-            Mengingat kembali memori yang menyakitkan memang berat. Tidak perlu terburu-buru. Ambil napas dalam-dalam, dan tuliskan apa yang dirasa nyaman untuk Anda ceritakan saat ini secara perlahan.
-          </p>
-        </div>
-
-        <div class="timeline-grid">
-          <!-- Left Column: User Input Form -->
-          <div class="timeline-card">
-            <div>
-              <div class="timeline-input-header">
-                <span class="timeline-input-label">Ceritakan kejadian yang dialami</span>
-                <span class="char-counter" id="char-counter">0 / 5000 karakter</span>
-              </div>
-              <textarea class="timeline-textarea" id="timeline-input" maxlength="5000" placeholder="Contoh: Kejadian pertama terjadi bulan lalu di dekat kantin sekolah. Ada kakak kelas bernama Ridwan yang mendorong saya hingga terjatuh. Kemarin mereka memalak uang jajan saya lagi di toilet jam 2 siang dengan rekaman CCTV menyala. Saya merasa sangat takut dan cemas untuk pergi ke sekolah.."></textarea>
-            </div>
-            
-            <div class="timeline-card-footer">
-              <span>🔒 Kerahasiaan cerita Anda terjamin</span>
-              <button class="btn btn-primary btn-ai" id="timeline-generate-btn" style="width: auto; margin-top: var(--space-4);">
-                Susun Laporan Berbasis AI 🪄
-              </button>
-            </div>
-          </div>
-
-          <!-- Right Column: AI Format Output Screen -->
-          <div class="timeline-card">
-            <div>
-              <div class="timeline-output-header">
-                <span class="timeline-output-label">Hasil Draft Kronologi</span>
-                <div class="output-actions">
-                  <button class="btn-icon" id="timeline-copy-btn" title="Salin ke Papan Klip" aria-label="Salin draf laporan">
-                    📋
-                  </button>
-                  <button class="btn-icon" id="timeline-download-btn" title="Unduh File Teks (.txt)" aria-label="Unduh draf laporan">
-                    💾
-                  </button>
-                </div>
-              </div>
-              
-              <!-- Report Box -->
-              <div class="timeline-output-box" id="timeline-output">
-                <div class="timeline-placeholder">
-                  <div class="timeline-placeholder-icon">🛡️</div>
-                  <p style="font-weight: var(--weight-medium); color: var(--color-primary);">Garis Waktu Kronologis Kosong</p>
-                  <p>Tulis cerita Anda di panel sebelah kiri dan klik tombol untuk menyusun kronologi yang rapi di sini.</p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Disclaimer note box -->
-            <div style="background-color: rgba(176, 138, 100, 0.1); border-left: 3px solid var(--color-accent); padding: var(--space-3); border-radius: var(--radius-sm); margin-top: var(--space-4); font-size: var(--font-size-xs); line-height: 1.5; color: var(--color-text-muted);">
-              <strong>PENTING:</strong> Hasil di atas hanyalah draf pembantu terstruktur. Anda dipersilakan menyunting kembali draf ini sebelum menggunakannya untuk laporan resmi ke pihak berwajib atau pendamping psikologis.
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="panel section-card" id="keahlian">
+      <div class="section-heading"><p class="eyebrow">06 — MY TOOLKIT</p><h2>Keahlian & Minat</h2></div>
+      <div class="skills-layout"><div><h3>Technical skills</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>C++</span><span>Git & GitHub</span><span>Web Development</span></div></div><div><h3>Business & product</h3><div class="skill-tags"><span>Business Analysis</span><span>Problem Solving</span><span>Product Ideation</span><span>Project Management</span></div></div><div><h3>Professional skills</h3><div class="skill-tags"><span>Leadership</span><span>Communication</span><span>Presentation</span><span>Teamwork</span></div></div><div><h3>Currently exploring</h3><div class="skill-tags"><span>Artificial Intelligence</span><span>Data & Analytics</span><span>Digital Product</span><span>Entrepreneurship</span></div></div></div>
+      <div class="learning-note"><span class="learning-icon">☾</span><p><b>Currently learning:</b> pengembangan web, data dan AI, strategi bisnis, serta workflow kolaborasi menggunakan Git & GitHub.</p><span class="learning-star">✧</span></div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="section-testimonials">
-      <div class="container" style="display: flex; justify-content: center;">
-        <div class="testimonial-card">
-          <h3 class="testimonial-title">Kisah Keberanian</h3>
-          <blockquote class="testimonial-quote">
-            "Awalnya saya takut untuk bercerita karena ingatan saya kacau dan tidak beraturan. Namun, program bantu BeBrave sangat sabar mendampingi dan memecah kekacauan itu menjadi catatan kronologis yang berurutan. Ini mempermudah saya membawa berkas draf laporan yang jelas saat melapor ke pihak berwajib dan psikolog psikologis."
-          </blockquote>
-          <p class="testimonial-author">— Pengguna Anonim (Survivor Perundungan)</p>
-          <div class="testimonial-tags">
-            <span class="testimonial-tag">🛡️ Data Dekripsi Lokal</span>
-            <span class="testimonial-tag">👁️‍🗨️ Identitas Perlindungan</span>
-            <span class="testimonial-tag">🔒 Enkripsi Client-Side</span>
-          </div>
-        </div>
-      </div>
+    <section class="content-grid final-grid">
+      <article class="panel section-card" id="faq"><div class="section-heading"><p class="eyebrow">A FEW ANSWERS</p><h2>FAQ</h2></div><div class="accordion">
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Apa yang sedang aku pelajari?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Aku sedang mempelajari pengembangan web, data, AI, serta pengembangan produk dan bisnis.</p></div></div>
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Project seperti apa yang aku sukai?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Aku tertarik pada proyek berbasis teknologi yang berangkat dari kebutuhan nyata dan punya potensi memberi dampak.</p></div></div>
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Bagaimana cara menghubungiku?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Kamu bisa menghubungiku melalui email atau media sosial yang tersedia pada bagian kontak.</p></div></div>
+      </div></article>
+      <aside class="panel contact-card" id="kontak"><p class="eyebrow">LET’S CONNECT</p><span class="contact-moon" aria-hidden="true">☾</span><h2>Punya ide menarik?</h2><p>Terbuka untuk diskusi, kolaborasi, dan kesempatan belajar bersama.</p><a class="button button-primary" href="mailto:tiaracommittech@gmail.com">Kirim email <span>↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/tiara-maulia-putri-sidarta-986897319/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/tiaracommit" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://wa.me/6285707381852" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></aside>
     </section>
-
   </main>
 
-  <!-- Footer -->
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Col 1: Brand & Desc -->
-        <div>
-          <a href="#hero" class="nav-brand" style="color: var(--color-primary); font-size: var(--font-size-lg); margin-bottom: var(--space-4);">
-            Be<span>Brave</span>
-          </a>
-          <p style="font-size: var(--font-size-xs); line-height: 1.6; max-width: 250px;">
-            BeBrave adalah platform sosial nirlaba yang berdedikasi membantu korban pelecehan, perundungan, dan kekerasan memulihkan rasa aman mereka melalui penataan memori yang aman.
-          </p>
-        </div>
-        <!-- Col 2: Services -->
-        <div>
-          <h4 style="font-size: var(--font-size-sm); margin-bottom: var(--space-4); font-weight: var(--weight-bold);">Fitur Utama</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted);">
-            <li><a href="#susun-kronologi">Susun Kronologi</a></li>
-            <li><a href="#tentang-isu">Mengapa Penting?</a></li>
-            <li><a href="#sumber-daya">Panduan Medis</a></li>
-            <li><a href="#hero">Dukungan Privat</a></li>
-          </ul>
-        </div>
-        <!-- Col 3: Partners -->
-        <div>
-          <h4 style="font-size: var(--font-size-sm); margin-bottom: var(--space-4); font-weight: var(--weight-bold);">Mitra Rujukan</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted);">
-            <li><a href="https://kemkes.go.id" target="_blank" rel="noopener">Kementerian Kesehatan RI</a></li>
-            <li><a href="https://www.who.int" target="_blank" rel="noopener">WHO Indonesia</a></li>
-            <li><a href="https://www.unicef.org/indonesia/id" target="_blank" rel="noopener">UNICEF Indonesia</a></li>
-            <li><a href="https://komnasperempuan.go.id" target="_blank" rel="noopener">Komnas Perempuan</a></li>
-          </ul>
-        </div>
-        <!-- Col 4: Contacts -->
-        <div>
-          <h4 style="font-size: var(--font-size-sm); margin-bottom: var(--space-4); font-weight: var(--weight-bold);">Darurat & Hubungi</h4>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--font-size-xs); color: var(--color-text-muted);">
-            <li>Hotline KPPPA: <a href="tel:129"><strong>Call 129</strong></a></li>
-            <li>Hotline Kemenkes: <a href="tel:119"><strong>Call 119 Ext 8</strong></a></li>
-            <li>Pusat Bantuan BeBrave</li>
-            <li>E-mail: support@bebrave.org</li>
-          </ul>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p style="font-size: var(--font-size-xs);">© 2026 BeBrave Platform. Dibuat dengan kepedulian sosial & privasi browser penuh.</p>
-        <div style="display: flex; gap: var(--space-4); font-size: var(--font-size-xs); color: var(--color-text-muted);">
-          <a href="#">Kebijakan Privasi</a>
-          <a href="#">Syarat Ketentuan</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Floating Elements -->
-  <!-- Back to top button -->
-  <button class="back-to-top" aria-label="Kembali ke atas">
-    ↑
-  </button>
-
+  <footer class="site-footer shell"><a class="footer-brand" href="#beranda">✦ Tiara</a><p>Dirancang dengan rasa ingin tahu dan sedikit magic.</p><p>© <span id="current-year">2026</span> Tiara Maulia Putri Sidarta</p><a class="back-top" href="#beranda" aria-label="Kembali ke atas">↑</a></footer>
 </body>
 </html>
